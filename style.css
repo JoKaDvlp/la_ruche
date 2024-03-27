@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=WindSong:wght@500&display=swap');
+
+  /* font-family: 'WindSong', cursive; */
+  /* font-family: 'Inter', sans-serif; */
+
+  /* background-color: #F3C827 jaune */
+  /* background-color: #593E26 marron */
+  /* background-color: #F66909 orange */
+  /* background-color: #1E150C noir */
+
+:root 
+{
+    --primaryColor :#593E26;
+    --secondaryColor :#F3C827;
+    --tertiaryColor :#F66909;
+    --contentColor :#1E150C;
+}
+
+  /* GENERAL */
+  h1 {
+    font-family: 'WindSong', cursive;
+    font-size: 8rem;
+    color: var(--primaryColor);
+  }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primaryColor);
+    width: 100%;
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: var(--contentColor)
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--contentColor);
+  }
+
+  a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+  }
+
+  .button a:visited {
+    color: white;
+  }
+
+  .button {
+    background-color: var(--tertiaryColor);
+    padding: 7px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 15px;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .justifyBetween {
+    justify-content: space-between;
+  }
+
+  .bg {
+    background-color: var(--secondaryColor);
+  }
+
+  .padding {
+    padding: 0 15% 0 15%;
+  }
+
+  .margin {
+    margin: 6rem 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  /* HERO */
+
+  header {
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header div {
+    width: 60%;
+  }
+  header img {
+    width : 30%
+  }
+
+  /* ENGAGEMENTS */
+
+  .engagements div p {
+    width: 45%;
+  }
+
+  /* BIENFAITS */
+
+  .bienfaits div p {
+    width: 26.6%;
+  }
+
+  /* PRODUITS */
+
+  .carte {
+    width: 26.6%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+  }
+  .carte img {
+    width: 100%;
+  }
+
+  .infosCarte {
+    width: 100%;
+    padding: 10px;
+    align-content: space-between;
+    justify-content: center;
+  }
+
+  .infosCarte h3,p {
+    width: 100%;
+  }
+
+  /* FOOTER */
+
+  footer div {
+    width: 26.6%;
+  }
+
+  /* colonne gauche */
+
+  footer address a {
+    display: block;
+    color: var(--contentColor);
+    margin-bottom: 5%;
+  }
+
+  footer address a i {
+    margin-right: 10px;
+  }
+
+  footer p {
+    margin-top: 5%;
+  }
+
+  /* colonne milieu */
+
+  .columnMiddle a i {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+
+  .columnMiddle a {
+    color: var(--contentColor);
+  }
+
+  /* colonne droite */
+
+  .columnRight a:visited {
+    color: var(--contentColor);
+  }
+
+  .columnRight ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  /* Version smartphone */
+  @media screen and (max-width: 575px){
+
+    /*GENERAL*/
+    .padding {
+      padding: 0 20px;
+    }
+    .margin {
+      margin: 2rem 0;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    a {
+      font-size: 0.8rem;
+    }
+    p {
+      line-height: 1.5rem;
+    }
+    /*HEADER*/
+    header {
+      align-content: center;
+      justify-content: center;
+    }
+    header img {
+      order: -1;
+      width: 50%;
+    }
+    header div{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /*section engagements*/
+    .engagements div p {
+      width: 100%;
+    }
+    /*section bienfaits*/
+
+    .bienfaits>div {
+      justify-content: center;
+    }
+    .bienfaits div p {
+      width: 100%;
+    }
+    /*section produits*/
+    .carte {
+      width: 100%;
+      padding: 0;
+    }
+    .carte img {
+      width: 38%;
+      border-radius: 10px 0 0 10px;
+      object-fit: cover;
+    }
+    .infosCarte {
+      width: 55%;
+      justify-content: flex-start;
+    }
+    .carte h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .carte p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    .produits {
+      gap: 20px;
+    }
+    /*FOOTER*/
+    .columnLeft {
+      width: 100%;
+    }
+    .columnMiddle{
+      width: 50%;
+    }
+    .columnRight{
+      width: 50%;
+    }
+    .columnMiddle div {
+      width: 100%;
+    }
+  }
+
+  /* version tablette */
+  @media screen and (min-width: 576px) and (max-width: 1180px) {
+    /* GENERAL*/
+    .padding {
+      padding: 0 100px;
+    }
+    .margin {
+      margin: 2rem 0;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    /* Section produits */
+    .carte {
+      width: 31%;
+    }
+  }
